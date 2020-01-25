@@ -1,0 +1,15 @@
+header img{
+    width: 100%;
+}
+
+.subtitle{
+    margin:20px;
+}
+
+.product{
+    margin-top: 10px;
+}
+
+.product card{
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+}

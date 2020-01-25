@@ -1,0 +1,122 @@
+<div class="container" *ngIf="!available; else showThis">
+  <h2 class="text-center" style="font-size: 72px; margin:30px 0">Sorry :(</h2>
+  <h2 class="text-center">Product Not found</h2>
+</div>
+
+
+<ng-template #showThis>
+  <div class="container product-container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="image-row text-center">
+          <img class="product-image" src="assets/images/products/{{product.id}}.webp">
+        </div>
+      </div>
+      <div class="col-md-7 product-details">
+        <div class="row">
+          <div class="col-md-9">
+              <h2 class="product-name">{{product.product_name}}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+              <h3 class="product-price">Rs. {{product.product_price}}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+              <p class="product-category">{{product.category}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Select Size <a href="">Check size chart</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" style="display:flex">
+            <div class="size text-center">
+                <span>XS</span>
+            </div>
+            <div class="size text-center">
+                <span>S</span>
+            </div>
+            <div class="size text-center">
+                <span>M</span>
+            </div>
+            <div class="size text-center">
+                <span>L</span>
+            </div>
+            <div class="size text-center">
+                <span>XL</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <button class="btn btn-danger btn-block">Buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Product Description
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                {{product.product_description}}
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Product Details
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                Material: 100% Cotton (Bio-Washed) 
+                Wash Care: Machine wash. Wash in cold water, use mild detergent, dry in shade, do not iron directly or scrub on print, do not bleach, do not tumble dry. Dry on flat surface as hanging may cause measurement variations.
+                Standard Sizing: We follow U.S. and EU standards and our sizes do not vary by more than +/- 0.5 inches.
+                <br>
+                Estimated Order Processing Time: 24 to 48 hours
+                <br>
+                Estimated Delivery Time:
+                Metros: 1 - 4 days
+                Rest of India: 4 - 7 days
+                <br>
+                Please Note: Colours may slightly vary depending on your screen brightness.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Artist's Details
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                Official Licensed Marvel Merchandise by The Souled Store. Created by our superhero team of designers, our Avengers Merchandise collection has something for every superhero fan. Ranging from Iron Man T-Shirts that'll make you look cooler than Tony Stark, to Captain America mobile covers that are strong enough to withstand even Hulk Smash, our cool graphic prints will make you want to save the world. The next time you need to lift Thor's Hammer, fight Hydra, or come face to face with the Punisher, make sure you look the part with our cool Superhero T-Shirts. Oh! and Groot fans, check out our Guardians of the Galaxy merchandise to make sure you fit in with Star-Lord and the rest of the crew.
+                <br>
+                By Marvel™
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</ng-template>

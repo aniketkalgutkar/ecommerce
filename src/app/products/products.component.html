@@ -1,0 +1,71 @@
+<header>
+    <img src="assets/images/categories/header-products.webp" class="img-responsive">
+</header>
+
+<div class="container">
+    <h2 class="subtitle text-center">All Products</h2>
+
+    <!-- <div class="products row">
+      <div class="product col-md-4">
+          <div class="card">
+            <img src="assets/images/products/1.webp" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Marvel Comic Strip</h5>
+              <p class="card-text">Rs. <span>699</span></p>
+              <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+          </div>
+      </div>
+
+      <div class="product col-md-4">
+          <div class="card">
+            <img src="assets/images/products/2.webp" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Captain America</h5>
+              <p class="card-text">Rs. <span>699</span></p>
+              <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+          </div>
+      </div>
+
+      <div class="product col-md-4">
+          <div class="card">
+            <img src="assets/images/products/3.webp" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Marauder's Map</h5>
+              <p class="card-text">Rs. <span>699</span></p>
+              <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+          </div>
+      </div>
+
+      <div class="product col-md-4">
+          <div class="card">
+            <img src="assets/images/products/4.webp" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Hooded T-shirt</h5>
+              <p class="card-text">Rs. <span>699</span></p>
+              <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+          </div>
+      </div>
+      
+    </div> -->
+
+    <div class="products row">
+      <div class="product col-md-4" *ngFor="let product of products" (click)="onSelect(product)">
+          <div class="card">
+            <img src="assets/images/products/{{product.id}}.webp" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{product.name}}</h5>
+              <p class="card-text">Rs. <span>{{product.price}}</span></p>
+              <a class="btn btn-primary" (click)="onSelect(product)">Buy</a>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+</div>
+
+
